@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills & Tools Toggle</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    /* ===== HOVER LABEL (TOP POPUP) ===== */
+    .hover-label {
+        position: fixed;
+        top: 20px;
+        padding: 10px 20px;
+        background: #38bdf8;
+        color: #020617;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 16px;
+        box-shadow: 0 0 15px rgba(56,189,248,0.6);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+        z-index: 999;
+    }
+
+    .hover-label.show {
+        opacity: 1;
+    }
+
+    /* ===== TOGGLE BAR ===== */
+    .toggle {
+        margin: 30px 0;
+        display: flex;
+        background: #020617;
+        padding: 6px;
+        border-radius: 40px;
+        gap: 6px;
+    }
+
+    .toggle button {
+        padding: 10px 22px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        background: transparent;
+        color: white;
+        font-size: 15px;
+        transition: all 0.3s ease;
+    }
+
+    .toggle button.active {
+        background: #38bdf8;
+        color: #020617;
+        box-shadow: 0 0 10px rgba(56,189,248,0.6);
+    }
+
+    /* ===== GRID ===== */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .card {
+        background: #020617;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s ease;
+        height: 120px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .icon {
+        width: 100%;
+        height: 100%;
+        max-width: 70px;
+        max-height: 70px;
+        object-fit: contain;
+    }
+
+    .hidden {
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- TOP HOVER LABEL -->
+<div id="hoverLabel" class="hover-label"></div>
+
+<!-- TOGGLE BUTTONS -->
+<div class="toggle">
+    <button class="active" onclick="showAll()">All</button>
+    <button onclick="showSkills()">Skills</button>
+    <button onclick="showTools()">Tools</button>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="grid">
+    <div class="card" data-name="JavaScript"><img src="images/JAVA.png" class="icon"></div>
+    <div class="card" data-name="Java"><img src="images/download.png" class="icon"></div>
+    <div class="card" data-name="HTML"><img src="images/html.png" class="icon"></div>
+    <div class="card" data-name="CSS"><img src="images/css.png" class="icon"></div>
+    <div class="card" data-name="Node.js"><img src="images/NODE.JS" class="icon"></div>
+    <div class="card" data-name="Express.js"><img src="images/EXPRESS.JS" class="icon"></div>
+    <div class="card" data-name="MongoDB"><img src="images/MONGODB.png" class="icon"></div>
+</div>
+
+<!-- TOOLS -->
+<div id="tools" class="grid">
+    <div class="card" data-name="VS Code"><img src="images/vscode.png" class="icon"></div>
+    <div class="card" data-name="GitHub"><img src="images/GITHUB.png" class="icon"></div>
+    <div class="card" data-name="Eclipse"><img src="images/ECLIPSE.png" class="icon"></div>
+</div>
+
+<script>
+const skills = document.getElementById("skills");
+const tools = document.getElementById("tools");
+const hoverLabel = document.getElementById("hoverLabel");
+
+/* ===== TOGGLE LOGIC ===== */
+function showSkills() {
+    skills.style.display = "grid";
+    tools.style.display = "none";
+    setActive(1);
+}
+
+function showTools() {
+    skills.style.display = "none";
+    tools.style.display = "grid";
+    setActive(2);
+}
+
+function showAll() {
+    skills.style.display = "grid";
+    tools.style.display = "grid";
+    setActive(0);
+}
+
+function setActive(index) {
+    document.querySelectorAll(".toggle button").forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+    });
+}
+
+/* ===== HOVER NAME POPUP ===== */
+document.querySelectorAll(".card").forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        hoverLabel.textContent = card.dataset.name;
+        hoverLabel.classList.add("show");
+    });
+
+    card.addEventListener("mouseleave", () => {
+        hoverLabel.classList.remove("show");
+    });
+});
+</script>
+
+</body>
+</html>

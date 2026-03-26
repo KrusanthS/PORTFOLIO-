@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects Section</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at top, #020617, #000);
+    color: #e5e7eb;
+    min-height: 100vh;
+    padding: 60px 0;
+    overflow-x: hidden;
+}
+
+/* ===== PROJECT SECTION ===== */
+.projects {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* ===== PROJECT CARD ===== */
+.project {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* reverse layout */
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+/* ===== IMAGE CARD ===== */
+.project-image {
+    flex: 1;
+    background: linear-gradient(145deg, #020617, #0f172a);
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 
+        0 0 30px rgba(99,102,241,0.35),
+        inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+.project-image img {
+    width: 100%;
+    border-radius: 14px;
+    display: block;
+}
+
+/* ===== CONTENT ===== */
+.project-content {
+    flex: 1;
+}
+
+.project-content h2 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.project-content h2 span {
+    color: #6366f1;
+}
+
+.project-content p {
+    color: #9ca3af;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 420px;
+}
+
+/* ===== BUTTON ===== */
+.project-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.project-content a:hover {
+    background: rgba(99,102,241,0.2);
+    box-shadow: 0 0 20px rgba(99,102,241,0.6);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .project,
+    .project.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-content p {
+        margin: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="projects">
+
+    <!-- Project 1 -->
+    <div class="project">
+        <div class="project-image">
+            <img src="https://via.placeholder.com/600x350/020617/6366f1?text=Modern+Portfolio" alt="">
+        </div>
+
+        <div class="project-content">
+            <h2>Modern <span>Portfolio</span> Website</h2>
+            <p>
+                A sleek modern portfolio website built with smooth animations,
+                glassmorphism UI, and dark futuristic design.
+            </p>
+            <a href="#">🌐 Website</a>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project reverse">
+        <div class="project-image">
+            <img src="images/" alt="">
+        </div>
+
+        <div class="project-content">
+            <h2>Movie <span>Landing</span> Page</h2>
+            <p>
+                A cinematic landing page inspired by modern OTT platforms,
+                featuring bold visuals and responsive layouts.
+            </p>
+            <a href="#">🎬 Website</a>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

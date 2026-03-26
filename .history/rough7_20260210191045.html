@@ -1,0 +1,95 @@
+/* ===== PROJECTS SECTION ===== */
+.projects {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* Each project row */
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Reverse layout */
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image */
+.project-image img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Content */
+.project-content {
+    max-width: 500px;
+}
+
+.project-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.project-content span {
+    color: #38bdf8;
+}
+
+.project-content p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #cbd5f5;
+}
+
+.project-content a {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-content a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(56,189,248,0.5);
+}
+
+/* ===== RESPONSIVE (TABLET & MOBILE) ===== */
+@media (max-width: 900px) {
+    .project,
+    .project.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-image img {
+        max-width: 100%;
+    }
+
+    .project-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .project-content p {
+        font-size: 0.95rem;
+    }
+}

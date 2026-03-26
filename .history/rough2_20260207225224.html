@@ -1,0 +1,105 @@
+<script>
+const skills = [
+`<!-- JavaScript -->
+<svg viewBox="0 0 128 128">
+<path fill="#f7df1e" d="M0 0h128v128H0z"/>
+<path d="M67 107c2 4 5 7 10 7 4 0 7-2 7-5 0-4-3-5-8-7l-3-1c-9-4-15-8-15-18 0-9 7-16 18-16 8 0 13 3 17 10l-9 6c-2-4-4-5-8-5-3 0-6 2-6 5 0 3 2 5 7 7l3 1c11 4 17 8 17 19 0 11-8 17-20 17-11 0-18-5-22-13z"/>
+</svg>`,
+
+`<!-- Java -->
+<svg viewBox="0 0 128 128">
+<path fill="#5382a1" d="M64 0C28 0 0 28 0 64s28 64 64 64 64-28 64-64S100 0 64 0z"/>
+<path fill="#fff" d="M40 80c0 8 10 14 24 14s24-6 24-14H40z"/>
+</svg>`,
+
+`<!-- HTML -->
+<svg viewBox="0 0 128 128">
+<path fill="#e34f26" d="M19 114L9 0h110l-10 114-45 14z"/>
+</svg>`,
+
+`<!-- CSS -->
+<svg viewBox="0 0 128 128">
+<path fill="#1572b6" d="M19 114L9 0h110l-10 114-45 14z"/>
+</svg>`,
+
+`<!-- PHP -->
+<svg viewBox="0 0 128 128">
+<ellipse cx="64" cy="64" rx="60" ry="40" fill="#777bb4"/>
+<text x="64" y="75" text-anchor="middle" fill="#fff" font-size="40">PHP</text>
+</svg>`,
+
+`<!-- C -->
+<svg viewBox="0 0 128 128">
+<circle cx="64" cy="64" r="60" fill="#00599c"/>
+<text x="64" y="75" text-anchor="middle" fill="#fff" font-size="40">C</text>
+</svg>`
+];
+
+const tools = [
+`<!-- VS Code -->
+<svg viewBox="0 0 128 128">
+<path fill="#007acc" d="M0 64l64-64 64 64-64 64z"/>
+</svg>`,
+
+`<!-- Git -->
+<svg viewBox="0 0 128 128">
+<circle cx="64" cy="64" r="60" fill="#f34f29"/>
+</svg>`,
+
+`<!-- Figma -->
+<svg viewBox="0 0 128 128">
+<circle cx="64" cy="32" r="20" fill="#f24e1e"/>
+<circle cx="64" cy="64" r="20" fill="#a259ff"/>
+<circle cx="64" cy="96" r="20" fill="#1abcfe"/>
+</svg>`,
+
+`<!-- Canva -->
+<svg viewBox="0 0 128 128">
+<circle cx="64" cy="64" r="60" fill="#00c4cc"/>
+</svg>`,
+
+`<!-- Docker -->
+<svg viewBox="0 0 128 128">
+<rect x="10" y="50" width="108" height="40" fill="#2496ed"/>
+</svg>`,
+
+`<!-- Photoshop -->
+<svg viewBox="0 0 128 128">
+<rect width="128" height="128" fill="#001e36"/>
+<text x="64" y="80" text-anchor="middle" fill="#31a8ff" font-size="48">Ps</text>
+</svg>`
+];
+
+function loadGrid(items) {
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    items.forEach(svg => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = svg;
+        grid.appendChild(card);
+    });
+}
+
+function showSkills() {
+    setActive(0);
+    loadGrid(skills);
+}
+
+function showTools() {
+    setActive(1);
+    loadGrid(tools);
+}
+
+function setActive(index) {
+    document.querySelectorAll(".toggle button").forEach((btn, i) =>
+        btn.classList.toggle("active", i === index)
+    );
+}
+
+loadGrid(skills);
+</script>
+
+</body>
+</html>

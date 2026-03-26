@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills & Tools Section</title>
+
+<style>
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: white;
+    min-height: 100vh;
+}
+
+/* ===== SKILL SECTION WRAPPER ===== */
+.skill-new {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== TOGGLE BAR ===== */
+.toggle {
+    margin: 30px 0;
+    display: flex;
+    background: #020617;
+    padding: 6px;
+    border-radius: 40px;
+    gap: 6px;
+}
+
+.toggle button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.toggle button.active {
+    background: #38bdf8;
+    color: #020617;
+    box-shadow: 0 0 10px rgba(56,189,248,0.6);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+    margin: 20px 0;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #38bdf8;
+    text-align: center;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    justify-items: center;
+    padding: 0 20px;
+}
+
+/* ===== CARD ===== */
+.card {
+    background: #020617;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    width: 120px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    z-index: 5;
+}
+
+/* ===== IMAGE ===== */
+.icon {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ===== POPUP TEXT ===== */
+.card::after {
+    content: attr(data-name);
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    background: rgba(56, 189, 248, 0.95);
+    color: #020617;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 0;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.card:hover::after {
+    opacity: 1;
+    transform: translate(-50%, -20px);
+}
+
+/* ===== HIDDEN ===== */
+.hidden {
+    display: none;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .toggle {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .toggle button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 16px;
+    }
+
+    .card {
+        height: 100px;
+        width: 100px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .card {
+        height: 90px;
+        width: 90px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<section class="skill-new">
+
+    <!-- TOGGLE BUTTONS -->
+    <div class="toggle">
+        <button class="active" onclick="showAll()">All</button>
+        <button onclick="showSkills()">Skills</button>
+        <button onclick="showTools()">Tools</button>
+    </div>
+
+    <!-- SKILLS -->
+    <h2 id="skillsHeading">Skills</h2>
+    <div id="skills" class="grid">
+        <div class="card" data-name="Java"><img src="images/JAVA.png" class="icon"></div>
+        <div class="card" data-name="JavaScript"><img src="images/JS.png" class="icon"></div>
+        <div class="card" data-name="HTML"><img src="images/html.png" class="icon"></div>
+        <div class="card" data-name="CSS"><img src="images/css.png" class="icon"></div>
+        <div class="card" data-name="Node.js"><img src="images/node.png" class="icon"></div>
+        <div class="card" data-name="Express.js"><img src="images/express.png" class="icon"></div>
+        <div class="card" data-name="MongoDB"><img src="images/mongodb.png" class="icon"></div>
+    </div>
+
+    <!-- TOOLS -->
+    <h2 id="toolsHeading">Tools</h2>
+    <div id="tools" class="grid">
+        <div class="card" data-name="VS Code"><img src="images/vscode.png" class="icon"></div>
+        <div class="card" data-name="GitHub"><img src="images/github.png" class="icon"></div>
+        <div class="card" data-name="Eclipse"><img src="images/eclipse.png" class="icon"></div>
+    </div>
+
+</section>
+
+<script>
+function setActive(btn) {
+    document.querySelectorAll(".toggle button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+}
+
+function showAll() {
+    setActive(event.target);
+    skills.classList.remove("hidden");
+    tools.classList.remove("hidden");
+    skillsHeading.classList.remove("hidden");
+    toolsHeading.classList.remove("hidden");
+}
+
+function showSkills() {
+    setActive(event.target);
+    skills.classList.remove("hidden");
+    skillsHeading.classList.remove("hidden");
+    tools.classList.add("hidden");
+    toolsHeading.classList.add("hidden");
+}
+
+function showTools() {
+    setActive(event.target);
+    tools.classList.remove("hidden");
+    toolsHeading.classList.remove("hidden");
+    skills.classList.add("hidden");
+    skillsHeading.classList.add("hidden");
+}
+</script>
+
+</body>
+</html>

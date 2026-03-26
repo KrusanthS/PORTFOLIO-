@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills & Tools Toggle</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .toggle {
+        margin: 30px 0;
+    }
+
+    .toggle button {
+        padding: 10px 20px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #1e293b;
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .toggle button.active {
+        background: #38bdf8;
+        color: #020617;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .card {
+        background: #020617;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        height: 120px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+        object-fit: contain;
+    }
+
+    .tools {
+        display: none;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="toggle">
+    <button class="active" onclick="showSkills()">Skills</button>
+    <button onclick="showTools()">Tools</button>
+</div>
+
+<!-- SKILLS -->
+<div id="skills" class="grid">
+    <div class="card"><img src="images/javascript.png" alt="JavaScript" class="icon"></div>
+    <div class="card"><img src="images/java.png" alt="Java" class="icon"></div>
+    <div class="card"><img src="images/html.png" alt="HTML" class="icon"></div>
+    <div class="card"><img src="images/css.png" alt="CSS" class="icon"></div>
+    <div class="card"><img src="images/php.png" alt="PHP" class="icon"></div>
+    <div class="card"><img src="images/c.png" alt="C Language" class="icon"></div>
+</div>
+
+<!-- TOOLS -->
+<div id="tools" class="grid tools">
+    <div class="card"><img src="images/vscode.png" alt="VS Code" class="icon"></div>
+    <div class="card"><img src="images/git.png" alt="Git" class="icon"></div>
+    <div class="card"><img src="images/figma.png" alt="Figma" class="icon"></div>
+    <div class="card"><img src="images/canva.png" alt="Canva" class="icon"></div>
+    <div class="card"><img src="images/docker.png" alt="Docker" class="icon"></div>
+    <div class="card"><img src="images/photoshop.png" alt="Photoshop" class="icon"></div>
+</div>
+
+<script>
+function showSkills() {
+    document.getElementById("skills").style.display = "grid";
+    document.getElementById("tools").style.display = "none";
+    setActive(0);
+}
+
+function showTools() {
+    document.getElementById("skills").style.display = "none";
+    document.getElementById("tools").style.display = "grid";
+    setActive(1);
+}
+
+function setActive(index) {
+    document.querySelectorAll(".toggle button").forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+    });
+}
+</script>
+
+</body>
+</html>

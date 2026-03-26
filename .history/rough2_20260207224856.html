@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills & Tools Section</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f14;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    padding: 30px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.toggle button {
+    background: #2a2f36;
+    border: none;
+    color: #aaa;
+    padding: 14px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.toggle button.active {
+    background: #e5e7eb;
+    color: #000;
+    font-weight: bold;
+}
+
+.toggle button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.toggle button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #121821;
+    height: 160px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #1a2230;
+}
+
+.card img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="toggle">
+        <button class="active" onclick="showSkills()">Skills</button>
+        <button onclick="showTools()">Tools</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+</div>
+
+<script>
+/* ===== LOCAL IMAGES ===== */
+const skills = [
+    "images/javascript.png",
+    "images/java.png",
+    "images/html.png",<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills & Tools Section</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0f14;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    padding: 30px;
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.toggle button {
+    background: #2a2f36;
+    border: none;
+    color: #aaa;
+    padding: 14px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.toggle button.active {
+    background: #e5e7eb;
+    color: #000;
+    font-weight: bold;
+}
+
+.toggle button:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.toggle button:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #121821;
+    height: 160px;
+    border-radius: 20px;
+    transition: 0.3s;
+
+    /* PNG handled here */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90px 90px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #1a2230;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="toggle">
+        <button class="active" onclick="showSkills()">Skills</button>
+        <button onclick="showTools()">Tools</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+
+</div>
+
+<script>
+/* ===== PNG ICON PATHS ===== */
+const skills = [
+    "images/javascript.png",
+    "images/java.png",
+    "images/html.png",
+    "images/css.png",
+    "images/php.png",
+    "images/c.png"
+];
+
+const tools = [
+    "images/vscode.png",
+    "images/git.png",
+    "images/figma.png",
+    "images/canva.png",
+    "images/docker.png",
+    "images/photoshop.png"
+];
+
+function loadGrid(items) {
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    items.forEach(icon => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        // PNG via CSS
+        card.style.backgroundImage = `url(${icon})`;
+
+        grid.appendChild(card);
+    });
+}
+
+function showSkills() {
+    setActive(0);
+    loadGrid(skills);
+}
+
+function showTools() {
+    setActive(1);
+    loadGrid(tools);
+}
+
+function setActive(index) {
+    const buttons = document.querySelectorAll(".toggle button");
+    buttons.forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+    });
+}
+
+loadGrid(skills);
+</script>
+
+</body>
+</html>
+
+    "images/css.png",
+    "images/php.png",
+    "images/c.png"
+];
+
+const tools = [
+    "images/vscode.png",
+    "images/git.png",
+    "images/figma.png",
+    "images/canva.png",
+    "images/docker.png",
+    "images/photoshop.png"
+];
+
+function loadGrid(items) {
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    items.forEach(src => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const img = document.createElement("img");
+        img.src = src;
+        img.alt = "icon";
+
+        card.appendChild(img);
+        grid.appendChild(card);
+    });
+}
+
+function showSkills() {
+    setActive(0);
+    loadGrid(skills);
+}
+
+function showTools() {
+    setActive(1);
+    loadGrid(tools);
+}
+
+function setActive(index) {
+    const buttons = document.querySelectorAll(".toggle button");
+    buttons.forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+    });
+}
+
+loadGrid(skills);
+</script>
+
+</body>
+</html>

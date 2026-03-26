@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Skills & Experience</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b1220;
+      color: #ffffff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    /* Toggle */
+    .toggle {
+      display: flex;
+      justify-content: center;
+      background: #1e293b;
+      border-radius: 30px;
+      width: 220px;
+      margin: 0 auto 35px;
+      padding: 4px;
+    }
+
+    .toggle button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      background: transparent;
+      color: #cbd5f5;
+      cursor: pointer;
+      border-radius: 30px;
+      font-size: 14px;
+    }
+
+    .toggle .active {
+      background: #334155;
+      color: #fff;
+    }
+
+    /* Grid */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 20px;
+      max-width: 720px;
+      margin: auto;
+    }
+
+    .card {
+      background: #020617;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 14px;
+      font-weight: bold;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      background: #020617;
+      box-shadow: 0 15px 35px rgba(99,102,241,0.4);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    /* Experience Section */
+    .experience-section {
+      margin-top: 90px;
+    }
+
+    .experience-card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      max-width: 820px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .experience-card h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .experience-card span {
+      font-size: 14px;
+      color: #94a3b8;
+    }
+
+    .experience-card ul {
+      margin-top: 12px;
+      padding-left: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Skills Section -->
+  <section>
+    <h2>My Skills</h2>
+
+    <div class="toggle">
+      <button class="active" onclick="showSkills()">Skills</button>
+      <button onclick="showTools()">Tools</button>
+    </div>
+
+    <!-- Skills -->
+    <div id="skills" class="grid">
+      <div class="card">HTML</div>
+      <div class="card">CSS</div>
+      <div class="card">JavaScript</div>
+      <div class="card">Java</div>
+      <div class="card">DSA</div>
+      <div class="card">SQL</div>
+    </div>
+
+    <!-- Tools -->
+    <div id="tools" class="grid hidden">
+      <div class="card">VS Code</div>
+      <div class="card">Git</div>
+      <div class="card">Canva</div>
+      <div class="card">Figma</div>
+      <div class="card">Docker</div>
+      <div class="card">Photoshop</div>
+    </div>
+  </section>
+
+
+
+  <!-- JavaScript -->
+  <script>
+    function showSkills() {
+      document.getElementById("skills").classList.remove("hidden");
+      document.getElementById("tools").classList.add("hidden");
+
+      document.querySelectorAll(".toggle button")[0].classList.add("active");
+      document.querySelectorAll(".toggle button")[1].classList.remove("active");
+    }
+
+    function showTools() {
+      document.getElementById("tools").classList.remove("hidden");
+      document.getElementById("skills").classList.add("hidden");
+
+      document.querySelectorAll(".toggle button")[1].classList.add("active");
+      document.querySelectorAll(".toggle button")[0].classList.remove("active");
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Skills & Tools Toggle</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .toggle {
+        margin: 30px 0;
+    }
+
+    .toggle button {
+        padding: 10px 20px;
+        margin: 0 5px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        background: #1e293b;
+        color: white;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+
+    .toggle button.active {
+        background: #38bdf8;
+        color: #020617;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .card {
+        background: #020617;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 0.3s;
+        height: 120px;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    /* IMAGE STYLE */
+    .icon {
+        width: 60px;
+        height: 60px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    /* ===== SKILLS ===== */
+    .js     { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"); }
+    .java   { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"); }
+    .html   { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"); }
+    .css    { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"); }
+    .php    { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"); }
+    .c      { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"); }
+
+    /* ===== TOOLS ===== */
+    .vscode { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"); }
+    .git    { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"); }
+    .figma  { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"); }
+    .canva  { background-image: url("https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg"); }
+    .docker { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"); }
+    .ps     { background-image: url("https://cdn.jsdelivr.net/gh/devicons/devicon/icons/photoshop/photoshop-line.svg"); }
+</style>
+</head>
+
+<body>
+
+<div class="toggle">
+    <button class="active" onclick="showSkills()">Skills</button>
+    <button onclick="showTools()">Tools</button>
+</div>
+
+<div id="grid" class="grid"></div>
+
+<script>
+const skills = ["js", "java", "html", "css", "php", "c"];
+const tools  = ["vscode", "git", "figma", "canva", "docker", "ps"];
+
+function loadGrid(items) {
+    const grid = document.getElementById("grid");
+    grid.innerHTML = "";
+
+    items.forEach(cls => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        const icon = document.createElement("div");
+        icon.className = `icon ${cls}`;
+
+        card.appendChild(icon);
+        grid.appendChild(card);
+    });
+}
+
+function showSkills() {
+    setActive(0);
+    loadGrid(skills);
+}
+
+function showTools() {
+    setActive(1);
+    loadGrid(tools);
+}
+
+function setActive(index) {
+    document.querySelectorAll(".toggle button").forEach((btn, i) => {
+        btn.classList.toggle("active", i === index);
+    });
+}
+
+// Initial load
+loadGrid(skills);
+</script>
+
+</body>
+</html>
