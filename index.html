@@ -3,454 +3,742 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Krusanth S | Full-Stack Developer & Problem Solver</title>
+    <meta name="description" content="Portfolio of Krusanth S, a highly skilled Full-Stack Developer specializing in React, Node.js, and MongoDB. 100+ DSA solved and 3rd year CSE student.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-    <meta name="viewport" content="width=devics-width,initial-scale=1.0">
 </head>
-<body >
-    <div class="head">
-    <div id="home">
-        <div class="container">
-            
-            <div class="nav-bar" id="navbar">
-            <nav>
-                <h1>Portfolio</h1>
-                <ul id="sidemenu">
-                   <li><a href="#home">Home</a></li>
-                   <li><a href="#about">About</a></li>
-                   <li><a href="#skills">Skills</a></li>
-                   <li><a href="#projects">Project</a></li>
-                   <li><a href="#contact">Contact</a></li>
-                   <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
+<body>
 
-                <i class="fas fa-bars" onclick="openmenu()"></i>
-            </nav>    
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <i class="fas fa-code" style="color: var(--primary);"></i>
+                KRUSANTH<span class="text-gradient">.S</span>
             </div>
-            <div class="header-text">
-                <h3>Hello, It's Me</h3>
-                <h1>Krusanth S</h1>
-                 <h3>And I'm a <span>Full Stack Developer</span></h3>
-                 <p>Skilled in building scalable web applications using modern                  technologies. Passionate about solving complex problems through Data Structures and Algorithms while creating efficient, high-performance solutions.</p>
-
-<div class="social-media">
-             
-<div class="social-icons">
-  <a href="https://github.com/KrusanthS" target="_blank" data-tooltip="GitHub">
-    <i class="fa-brands fa-github"></i>
-  </a>
-
-  <a href="https://leetcode.com/u/SKrusanth/" target="_blank" data-tooltip="LeetCode">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none">
-      <path d="M15.5 3.5L7.8 10.2C6.4 11.6 6.4 13.8 7.8 15.2L14.5 21.9"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M7.5 12H20.5"
-        stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-    </svg>
-  </a>
-
-  <a href="https://www.linkedin.com/in/s-krusanth-b74ba3355/" target="_blank" data-tooltip="LinkedIn">
-    <i class="fa-brands fa-linkedin"></i>
-  </a>
-
-  <a href="https://www.hackerrank.com/profile/krusanth_sk" data-tooltip="HackerRank">
-    <i class="fa-brands fa-hackerrank"></i>
-  </a>
-</div>
-
-
-
-
-
-
-                 </div>
-                 <a href="images/new-resume.pdf" alt="rusume" download="" class="cv" >Download CV</a>
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
-        </div>
-    </div>
-
-                                <!-- ABOUT ME -->
-
- <div class="about" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/profile-pic.jpg" alt="profile">
+            <div class="nav-links">
+                <div class="nav-close" id="nav-close">
+                    <i class="fas fa-times"></i>
                 </div>
-                <div class="about-col-2">
-                   <h1>About&nbsp; <span>Me</span></h1>  
-                   <p>I am a Full Stack Developer specializing in building scalable, efficient, and user-focused web applications using modern technologies. I have a strong foundation in Data Structures and Algorithms and focus on writing clean, maintainable, and high-performance code. I am passionate about continuous learning and applying best practices to develop reliable solutions that solve real-world problems.</p> 
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">Hire Me</a>
             </div>
         </div>
-    </div>
-    </div>
+    </nav>
 
-                               <!-- SKILLS -->
-    <!-- <section class="skill">                        
-    <div class="skill">
-            <div class="main-head"> <span>My </span> &nbsp;Skills </h1></div>
-        
-    <div class="skill-main" id="skills">
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="glass" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.5rem 1rem; border-radius: 2rem; margin-bottom: 2rem;">
+                    <span style="width: 8px; height: 8px; background: #22c55e; border-radius: 50%;"></span>
+                    <span style="font-size: 0.8rem; font-weight: 700; color: #94a3b8;">Full-Stack Developer</span>
+                </div>
+                <h1>Krusanth <span class="text-gradient">S</span></h1>
+                <div class="typing-container">
+                    <span class="typing-text" id="typing-text"></span>
+                </div>
+                <p class="hero-p">
+                    Computer Science and Engineering student at Dhanalakshmi Srinivasan University. 
+                    Building mission-critical full-stack applications with a focus on problem-solving.
+                </p>
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                    <a href="#projects" class="btn btn-primary">
+                        View My Work <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="images/KRUSANTH_RESUME .pdf" download="KRUSANTH_RESUME.pdf" class="btn btn-secondary">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+                <!-- SOCIAL LINKS -->
+                <div style="display: flex; gap: 1.2rem; margin-top: 2.5rem; align-items: center; justify-content: flex-start;">
+                    <div class="social-wrapper">
+                        <a href="https://www.linkedin.com/in/s-krusanth-b74ba3355/" target="_blank" class="social-link" style="--hover-color: #0077b5;"><i class="fab fa-linkedin"></i></a>
+                        <span class="social-tooltip">LinkedIn</span>
+                    </div>
+                    <div class="social-wrapper">
+                        <a href="mailto:krusanth.sk@gmail.com" class="social-link" style="--hover-color: #ea4335;"><i class="fas fa-envelope"></i></a>
+                        <span class="social-tooltip">Email</span>
+                    </div>
+                    <div class="social-wrapper">
+                        <a href="https://leetcode.com/u/SKrusanth/" target="_blank" class="social-link" style="--hover-color: #FFA116;"><i class="fas fa-code"></i></a>
+                        <span class="social-tooltip">LeetCode</span>
+                    </div>
+                    <div class="social-wrapper">
+                        <a href="https://github.com/KrusanthS" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        <span class="social-tooltip">GitHub</span>
+                    </div>
+                    <div class="social-wrapper">
+                        <a href="https://www.hackerrank.com/profile/krusanth_sk" target="_blank" class="social-link" style="--hover-color: #2ec866;"><i class="fab fa-hackerrank"></i></a>
+                        <span class="social-tooltip">HackerRank</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="profile-card">
+                    <img src="images/profile-pic.jpg" alt="Krusanth S">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>My <span class="text-gradient">Journey</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-grid">
+                <div>
+                    <h3 style="font-size: 1.8rem; margin-bottom: 1.5rem;"><i class="fas fa-user-graduate text-gradient"></i> My Story</h3>
+                    <div style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.8;">
+                        <p style="margin-bottom: 1.5rem;">
+                            I’m a 3rd-year CSE student at <strong>Dhanalakshmi Shrinivasan University</strong>, focused on becoming a strong full stack developer through consistent hands-on learning and real-world experience.
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            Not because I had a perfect plan — but because I <strong>couldn’t stop building and improving</strong>.
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            I work with <strong>Node.js, Express.js, MongoDB, React, and JavaScript</strong>, focusing on scalable backend development, clean code, and efficient system design. Currently, as a <strong>Full Stack Developer Intern at Vdart</strong>, I contribute to building and optimizing backend systems in a collaborative, real-world development environment.
+                        </p>
+                        <p style="margin-bottom: 1.5rem;">
+                            With <strong>100+ LeetCode problems solved</strong> and an <strong>8.05 CGPA</strong>, I bring a strong problem-solving mindset, consistency, and a commitment to continuous growth.
+                        </p>
+
+                        <p>
+                            I’m a Full Stack Developer focused on building scalable systems, continuously learning, and contributing to meaningful products.
+                        </p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <i class="fas fa-code-branch" style="color: var(--primary); margin-bottom: 0.5rem;"></i>
+                            <div class="stat-val">10+</div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-brain" style="color: var(--accent); margin-bottom: 0.5rem;"></i>
+                            <div class="stat-val">100+</div>
+                            <div class="stat-label">LeetCode Solved</div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-rocket" style="color: #facc15; margin-bottom: 0.5rem;"></i>
+                            <div class="stat-val">Live</div>
+                            <div class="stat-label">Project Shipped</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-card text-left">
+                    <h3 style="font-size: 1.6rem; margin-bottom: 2rem;">Education & Goals</h3>
+                    <div style="display: flex; flex-direction: column; gap: 2rem;">
+                        <div class="glass" style="padding: 1.5rem; border-radius: 1.5rem; border-left: 4px solid var(--primary);">
+                            <h4 style="color: white; margin-bottom: 0.4rem;">Dhanalakshmi Shrinivasan University</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.5rem;">B.Tech in Computer Science and Engineering</p>
+                            <div style="display: flex; justify-content: space-between; align-items: center;">
+                                <span style="font-size: 0.8rem; color: var(--primary);">2023 - Present</span>
+                                <span class="tech-tag" style="background: var(--primary); color: white;">8.05 CGPA</span>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1.2rem;">
+                            <div class="glass" style="width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; shrink: 0;">
+                                <i class="fas fa-trophy" style="color: #facc15;"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.4rem; font-size: 1.1rem;">Achievements</h4>
+                                <ul style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; padding-left: 1.2rem;">
+                                    <li>Solved 100+ problems on LeetCode (DSA)</li>
+                                    <li>Prize winner in Web Development & Debugging</li>
+                                    <li>Active Hackathon participant</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 1.2rem;">
+                            <div class="glass" style="width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; shrink: 0;">
+                                <i class="fas fa-certificate" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.4rem; font-size: 1.1rem;">Featured Courses</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Java Programming (NPTEL), Data Structures & Algorithms (LeetCode Problem Solving Badge).</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; gap: 1.2rem;">
+                            <div class="glass" style="width: 45px; height: 45px; border-radius: 12px; display: flex; align-items: center; justify-content: center; shrink: 0;">
+                                <i class="fas fa-search" style="color: var(--accent);"></i>
+                            </div>
+                            <div>
+                                <h4 style="margin-bottom: 0.4rem; font-size: 1.1rem;">Seeking Opportunities</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">Looking for Full-time Full Stack roles or high-impact internships where I can ship real features.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION WITH FILTER -->
+    <section id="skills" class="reveal" style="background: rgba(17, 24, 39, 0.4);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Technical <span class="text-gradient">Arsenal</span></h2>
+                <div class="underline"></div>
+            </div>
             
-        <div class="skill-left">
-           <h3>TECHNICAL SKILLS</h3>
-           <div class="skill-bar">
-            <p>HTML</p>
-            <P>90%</P>
-           </div>
-           <div class="bar">
-            <span class="html"></span>
-           </div>
+            <!-- SKILL CATEGORY NAV -->
+            <div class="skill-nav-container">
+                <button class="skill-nav-item active" data-filter="all">All Skills</button>
+                <button class="skill-nav-item" data-filter="frontend">Frontend</button>
+                <button class="skill-nav-item" data-filter="backend">Backend</button>
+                <button class="skill-nav-item" data-filter="databases">Databases</button>
+                <button class="skill-nav-item" data-filter="tools">Core & Tools</button>
+            </div>
 
-           <div class="skill-bar">
-            <p>CSS</p>
-            <P>75%</P>
-           </div>
-           <div class="bar">
-            <span class="css"></span>
-           </div>
-
-           <div class="skill-bar">
-            <p>JAVA</p>
-            <P>72%</P>
-           </div>
-           <div class="bar">
-            <span class="java"></span>
-           </div>
-
-           <div class="skill-bar">
-            <p>JAVASCRIPT</p>
-            <P>60%</P>
-           </div>
-           <div class="bar">
-            <span class="javascript"></span>
-           </div>
-
-           <div class="skill-bar">
-            <p>PYTHON</p>
-            <P>65%</P>
-           </div>
-           <div class="bar">
-            <span class="python"></span>
-           </div>
-
-           <div class="skill-bar">
-            <p>BOOTSTRAP</p>
-            <P>85%</P>
-           </div>
-           <div class="bar">
-            <span class="bootstrap"></span>
-           </div>
-
-
-
-
-
-
-
-
-          <div class="skill-bar">
-            <p>NODE.JS</p>
-            <P>85%</P>
-           </div>
-           <div class="bar">
-            <span class="bootstrap"></span>
-           </div>
-
-           <div class="skill-bar">
-            <p>EXPRESS.JS</p>
-            <P>85%</P>
-           </div>
-           <div class="bar">
-            <span class="bootstrap"></span>
-           </div>
-           <div class="skill-bar">
-            <p>C</p>
-            <P>85%</P>
-           </div>
-           <div class="bar">
-            <span class="bootstrap"></span>
-           </div>
-
-
+            <div class="skills-filter-grid" id="skills-grid">
+                <!-- Skill items -->
+                <div class="skill-card-v2" data-category="frontend">
+                    <div class="skill-icon-box"><img src="images/HTML.png" alt="HTML5"></div>
+                    <span class="skill-name">HTML5</span>
+                </div>
+                <div class="skill-card-v2" data-category="frontend">
+                    <div class="skill-icon-box"><img src="images/CSS.png" alt="CSS3"></div>
+                    <span class="skill-name">CSS3</span>
+                </div>
+                <div class="skill-card-v2" data-category="frontend">
+                    <div class="skill-icon-box"><img src="images/js.png" alt="JS"></div>
+                    <span class="skill-name">JavaScript</span>
+                </div>
+                <div class="skill-card-v2" data-category="backend">
+                    <div class="skill-icon-box"><img src="images/NODEJS.png" alt="Node"></div>
+                    <span class="skill-name">Node.js</span>
+                </div>
+                <div class="skill-card-v2" data-category="backend">
+                    <div class="skill-icon-box"><img src="images/EXPRESSJS.png" alt="Express"></div>
+                    <span class="skill-name">Express</span>
+                </div>
+                <div class="skill-card-v2" data-category="databases">
+                    <div class="skill-icon-box"><img src="images/MONGODB.png" alt="MongoDB"></div>
+                    <span class="skill-name">MongoDB</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/GITHUB.png" alt="Git"></div>
+                    <span class="skill-name">Git / GitHub</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/JAVA.png" alt="Java"></div>
+                    <span class="skill-name">Java</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/C.png" alt="C"></div>
+                    <span class="skill-name">C Language</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/DSA.png" alt="DSA"></div>
+                    <span class="skill-name">DSA</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/VSCode.png" alt="VS Code"></div>
+                    <span class="skill-name">VS Code</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/unity.png" alt="Unity"></div>
+                    <span class="skill-name">Unity</span>
+                </div>
+                <div class="skill-card-v2" data-category="tools">
+                    <div class="skill-icon-box"><img src="images/ECLIPSE.png" alt="Eclipse"></div>
+                    <span class="skill-name">Eclipse</span>
+                </div>
+            </div>
         </div>
-        <div class="skill-right">
-           <h3>PROFESSIONAL SKILLS</h3>
-           <div class="skill-bar">
-            <p>PROBLEM-SOLVING</p>
-            <P>60%</P>
-           </div>
-           <div class="bar">
-            <span class="problem-solving"></span>
-           </div>
+    </section>
 
-           <div class="skill-bar">
-            <p>COMMUNICATION SKILL</p>
-            <P>70%</P>
-           </div>
-           <div class="bar">
-            <span class="communication-skill"></span>
-           </div>
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>My <span class="text-gradient">Projects</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1: TicketDesk -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/ticketdesk.png" alt="TicketDesk">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <span class="tech-tag" style="background: var(--primary); color: white; border: none;">Production Grade</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 style="margin-bottom: 1rem;">TicketDesk — Production IT Support</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                            A full-stack IT ticket system with smart priority scoring (Impact × Urgency), Socket.io real-time updates, and Gmail API integration.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MERN Stack</span>
+                            <span class="tech-tag">Socket.io</span>
+                            <span class="tech-tag">Gmail API</span>
+                            <span class="tech-tag">SLA Tracking</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+                            <a href="https://github.com/KrusanthS" target="_blank" style="color: var(--text-main); text-decoration: none; font-size: 0.8rem;"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
 
-           <div class="skill-bar">
-            <p>TEAM WORK</p>
-            <P>80%</P>
-           </div>
-           <div class="bar">
-            <span class="team-work"></span>
-           </div>
+                <!-- Project 2: Smart Bus -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/smartBus.png" alt="Smart Bus">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <span class="tech-tag" style="background: var(--primary); color: white; border: none;">IoT & safety</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 style="margin-bottom: 1rem;">Smart Bus Automation</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                            RFID-based student verification and GPS tracking system. Features vibration sensors for accident detection and automated notifications.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">RFID</span>
+                            <span class="tech-tag">GPS API</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+                            <a href="https://github.com/KrusanthS" target="_blank" style="color: var(--text-main); text-decoration: none; font-size: 0.8rem;"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
 
-           <div class="skill-bar">
-            <p>PROJECT MANAGEMENT</p>
-            <P>72%</P>
-           </div>
-           <div class="bar">
-            <span class="project-management"></span>
-           </div>
-           
-        </div>   
-    </div>
-   </section>     -->
-<section class="skill-new">
-             <h1>Skills</h1>
-    <!-- TOGGLE -->
-    <div class="toggle">
-        <button class="active" onclick="showAll(event)">All</button>
-        <button onclick="showSkills(event)">Skills</button>
-        <button onclick="showTools(event)">Tools</button>
-    </div>
- 
-    <!-- SKILLS -->
-    <h2 id="skillsHeading">Skills</h2>
-    <div id="skills" class="grid">
-        <div class="card" data-name="Java"><img src="images/JAVA.png" class="icon"></div>
-        <div class="card" data-name="C"><img src="images/C.png" class="icon"></div>
-        <div class="card" data-name="JavaScript"><img src="images/download.png" class="icon"></div>
-        <div class="card" data-name="HTML"><img src="images/html.png" class="icon"></div>
-        <div class="card" data-name="CSS"><img src="images/css.png" class="icon"></div>
-        <div class="card" data-name="Node.js"><img src="images/NODEJS.png" class="icon"></div>
-        <div class="card" data-name="Express.js"><img src="images/EXPRESSJS.png" class="icon"></div>
-        <div class="card" data-name="MongoDB"><img src="images/mongodb.png" class="icon"></div>
-    </div>
+                <!-- Project 3: Aari Boutique -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/aari.jpeg" alt="Aari Boutique">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <span class="tech-tag" style="background: var(--primary); color: white; border: none;">Consultancy Project</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 style="margin-bottom: 1rem;">Aari Boutique & Services</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Engineered as a Lead Software Consultant for this freelance project, delivering a scalable business ecosystem for Aari Design. Integrated automated enquiry management and optimized service discoverability.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">MERN Stack</span>
+                            <span class="tech-tag">Enterprise Architecture</span>
+                            <span class="tech-tag">Consultancy</span>
+                            <span class="tech-tag">Freelancing</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+                            <a href="https://srisaifashion.shop" target="_blank" style="color: var(--primary); text-decoration: none; font-weight: 800; font-size: 0.8rem;"><i class="fas fa-globe"></i> Live</a>
+                        </div>
+                    </div>
+                </div>
 
-    <!-- TOOLS -->
-    <h2 id="toolsHeading">Tools</h2>
-    <div id="tools" class="grid">
-        <div class="card" data-name="VS Code"><img src="images/vscode.png" class="icon"></div>
-        <div class="card" data-name="GitHub"><img src="images/github.png" class="icon"></div>
-        <div class="card" data-name="Unity"><img src="images/unity.png" class="icon"></div>
-        <div class="card" data-name="Eclipse"><img src="images/eclipse.png" class="icon"></div>
-    </div>
-
-</section>
-
-   <!-- ----PROJECTS----- -->
-<section class="projects" id="projects">
-                 <h1>Projects</h1>
-    <!-- Project 1 -->
-    <div class="project">
-        <div class="project-image">
-            <img src="images/smartBus.png" alt="">
-            
+                <!-- Project 4: Skill Swap -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="images/skill-swap.png" alt="Skill Swap">
+                        <div style="position: absolute; bottom: 1rem; left: 1rem;">
+                            <span class="tech-tag" style="background: var(--primary); color: white; border: none;">Education</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 style="margin-bottom: 1rem;">Skill Swap Platform</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                            Scalable platform for peer-to-peer learning and mentorship. Features secure role-based access, swap history, and progress tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                        <div style="display: flex; gap: 1rem; border-top: 1px solid var(--glass-border); padding-top: 1.5rem;">
+                            <a href="https://github.com/KrusanthS" target="_blank" style="color: var(--text-main); text-decoration: none; font-size: 0.8rem;"><i class="fab fa-github"></i> Source</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="project-content">
-            <h2>Smart <span>Bus </span> Automation</h2>
-            <p>
-               The Smart Bus Automation project is designed to improve student safety and efficiency in college transportation. 
-            </p>
-            <a href="#">🌐 Website</a>
-            <a href="#">Git hub</a>
+    <!-- CERTIFICATIONS SECTION -->
+    <section id="certifications" class="reveal" style="background: rgba(17, 24, 39, 0.4);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Major <span class="text-gradient">Certifications</span></h2>
+                <div class="underline"></div>
+            </div>
+            <div class="cert-grid">
+                <!-- Certification 1: Java -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1yPozezWT5scuUSiJJRBZ-t3ctOi1d6sU/view?usp=drivesdk">
+                            <img src="images/JAVA.jpeg" alt="Java" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">NPTEL</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Programming In Java</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Mastery of Object-Oriented Programming and high-performance Java application development.</p>
+                    </div>
+                </div>
+                <!-- Certification 2: Full Stack -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1GmjlzBQLXuj-69KYCaLoJo3-kWdIk5fq/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/FULL-STACK.jpeg" alt="Node" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">MERN Stack</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Full Stack Development</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Comprehensive expertise in building scalable web applications using the MERN stack ecosystem.</p>
+                    </div>
+                </div>
+                <!-- Certification 3: AR/VR -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1GYCaUeZW98AHogefwZJ96VwiSQW0Vwbh/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/ARVR.jpeg" alt="AR/VR" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">Emerging Tech</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">AR/VR Development</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Building immersive augmented and virtual reality experiences with interactive interfaces.</p>
+                    </div>
+                </div>
+                <!-- Certification 4: Unity -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/17S__6G-B_I1MBQR30i8iYhzX2j05I3wo/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/UNITY-BADGE.jpeg" alt="Unity" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">Unity Technologies</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Unity Essentials Badge</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Advanced certification in real-time 3D development and Unity engine fundamentals.</p>
+                    </div>
+                </div>
+                <!-- Certification 5: Cloud Computing -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1d32gHkkLcb6QxpGoUlWzBRej_eRf2W4Q/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/CLOUD-COMPUTING.jpeg" alt="Cloud" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">NPTEL</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Cloud Computing</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Specialization in distributed systems, virtualization, and cloud architectural principles.</p>
+                    </div>
+                </div>
+                <!-- Certification 6: Debugging -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1H1mG6NpCCH4RpU2Zdo9D-u3DbpghjOrE/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/DEBUGGING.jpeg" alt="Debugging" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">Technical Skills</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Advanced Debugging</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Won the third price. Expertise in complex troubleshooting and optimizing software reliability.</p>
+                    </div>
+                </div>
+                <!-- Certification 7: Web Design -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1Gql3nQlMaqx8WXpoMkhWpYBJeUP4DdlT/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/WEB-DESIGNING.jpeg" alt="Web Design" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">UI/UX Design</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Responsive Web Design</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Won the second price. Crafting user-centric interfaces with advanced accessibility standards.</p>
+                    </div>
+                </div>
+                <!-- Certification 8: Industrial Visit -->
+                <div class="cert-card glass">
+                    <div class="cert-img-container" style="height: 220px; position: relative; overflow: hidden; background: rgba(0,0,0,0.2);">
+                        <a href="https://drive.google.com/file/d/1H7amgzmXXtu6xxiAXiI0u0c3--foYVni/view?usp=drivesdk" target="_blank" style="display: block; width: 100%; height: 100%;">
+                            <img src="images/IV.jpeg" alt="Industrial Visit" style="width: 100%; height: 100%; object-fit: contain;">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">Professional Growth</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Industrial Training Visit</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Understanding enterprise workflows and analyzing large-scale industrial software systems.</p>
+                    </div>
+                </div>
+                <!-- Certification 9: InternPe -->
+                <!-- <a href="https://drive.google.com/file/d/1H7amgzmXXtu6xxiAXiI0u0c3--foYVni/view?usp=drivesdk" target="_blank" class="cert-card glass" style="text-decoration: none; color: inherit; padding: 0; overflow: hidden;">
+                    <div class="cert-img-container" style="height: 180px; position: relative; overflow: hidden; background: linear-gradient(45deg, rgba(30,41,59,0.8), rgba(15,23,42,0.9));">
+                        <img src="images/GITHUB.png" alt="InternPe" style="width: 80px; height: 80px; object-fit: contain;">
+                        <div class="cert-overlay">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                    </div>
+                    <div class="cert-info" style="padding: 1.5rem;">
+                        <div class="cert-issuer">InternPe</div>
+                        <h3 style="font-size: 1.1rem; margin-bottom: 0.5rem;">Software Internship</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted);">Applied full-stack development and collaborative version control in a professional environment.</p>
+                    </div>
+                </a> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="reveal">
+        <div class="container">
+            <div class="section-title">
+                <h2>Let's <span class="text-gradient">Innovate</span> Together</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <h3 style="margin-bottom: 2rem;">Available for Hire</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem;">
+                        I am currently seeking opportunities to join a forward-thinking team where I can contribute to meaningful projects.
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <a href="mailto:krusanth.sk@gmail.com" target="_blank" class="glass contact-card">
+                            <i class="fas fa-envelope text-gradient"></i>
+                            <div>
+                                <div class="card-label">Email</div>
+                                <div class="card-text">krusanth.sk@gmail.com</div>
+                            </div>
+                        </a>
+                        <a href="tel:+918610474075" class="glass contact-card">
+                            <i class="fas fa-phone text-gradient"></i>
+                            <div>
+                                <div class="card-label">Phone</div>
+                                <div class="card-text">+91 8610474075</div>
+                            </div>
+                        </a>
+                        <div class="glass contact-card">
+                            <i class="fas fa-map-marker-alt text-gradient"></i>
+                            <div>
+                                <div class="card-label">Location</div>
+                                <div class="card-text">Tamil Nadu, Trichy</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="glass form-container" onsubmit="event.preventDefault(); alert('🚀 Message sent! I will get back to you soon.');">
+                    <h3 style="margin-bottom: 2rem;">Drop a Message</h3>
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" class="input-field" required>
+                        <input type="email" placeholder="Email Address" class="input-field" required>
+                    </div>
+                    <textarea placeholder="Tell me about your project or opportunity..." rows="6" class="input-field" required></textarea>
+                    <button type="submit" class="btn btn-primary form-btn">Send Proposal <i class="fas fa-paper-plane" style="margin-left: 0.8rem;"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <a href="#" class="back-to-top" id="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!-- Certificate Modal -->
+    <div class="cert-modal" id="cert-modal">
+        <div class="modal-content">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <img src="" alt="Full Certificate" id="modal-img">
         </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project reverse">
-        <div class="project-image">
-            <img src="images/skill-swap.png" alt="">
-        </div>
+    <script>
+        // Back to Top Logic
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) backToTop.classList.add('show');
+            else backToTop.classList.remove('show');
+        });
 
-        <div class="project-content">
-            <h2>Skill <span>Swap</span> Platform</h2>
-            <p>
-                The Skill Swap Platform is a web application that allows users to learn new skills by exchanging skills with others or by getting mentorship.
-            </p>
-            <a href="#"> Website</a>
-            <a href="#">Git hub</a>
-        </div>
-    </div>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
+        });
 
-    
-    <!-- Project 3 -->
-     <div class="project">
-        <div class="project-image">
-            <img src="images/aari.jpeg" alt="">
-            
-        </div>
+        // Skill Filtering Logic
+        const filterBtns = document.querySelectorAll('.skill-nav-item');
+        const skillCards = document.querySelectorAll('.skill-card-v2, .skill-badge-card');
 
-       <div class="project-content">
-    <h2>Business <span>Website</span></h2>
-    <p>
-        Developed a business website for Aari Design & Beauty Services, showcasing fashion products 
-        such as sarees, gowns, and ethnic wear, along with beauty service offerings, secure shopping, 
-        and an easy-to-navigate online store.
-    </p>
-    <a href="https://srisaifashion.shop">🌐 Website</a>
-    <a href="#">GitHub</a>
-    </div>
-    </div>
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                skillCards.forEach(card => {
+                    const cardCategory = card.getAttribute('data-category');
+                    if (filter === 'all' || cardCategory === filter) {
+                        card.style.display = 'flex';
+                        setTimeout(() => card.style.opacity = '1', 10);
+                    } else {
+                        card.style.opacity = '0';
+                        setTimeout(() => card.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
 
-          <!-- Project 4 -->
-    <div class="project reverse">
-        <div class="project-image">
-            <img src="images/game.jpeg" alt="">
-        </div>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const navClose = document.getElementById('nav-close');
+        const navLinks = document.querySelector('.nav-links');
+        const links = document.querySelectorAll('.nav-links a');
 
-        <div class="project-content">
-           <h2>Bouncing <span>Coin Game</span></h2>
-        <p>
-    
-            Developed a 3D game using Unity where a bouncing coin navigates through obstacles, focusing on 
-           physics-based movement, smooth controls, and engaging gameplay mechanics.
-        </p>
-        <a href="#">🌐 Demo</a>
-        <a href="#">GitHub</a>
-    </div>
-    </div>
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navLinks.classList.add('active');
+        });
 
-     <!-- Project 5 -->
-     <div class="project">
-        <div class="project-image">
-            <img src="images/hushh.png" alt="">
-            
-        </div>
+        navClose.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
 
-      <div class="project-content">
-    <h2>Hushh <span>DataGuard</span></h2>
-    <p>
-        Developed a full-stack web application as part of the Hushh AI x DSU Trichy Hackathon 
-        to enable safer and more transparent data sharing. The platform allows users to control, 
-        monitor, and understand their personal data through a centralized dashboard, consent 
-        management system, and activity tracking. It also features a Data Value Explorer and a 
-        gamified reward system (Hushh Coins) to encourage secure data practices and improve user 
-        engagement.
-    </p>
-    <a href="https://hushh-data-defenders.onrender.com">🌐 Demo</a>
-    <a href="#">GitHub</a>
-</div>
-    </div>
+        // Close on link click
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
 
+        // Close on clicking anywhere else on the screen
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+            }
+        });
 
-</section>
+        // Prevent sidebar clicks from closing the menu
+        navLinks.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
 
+        // Typing effect
+        const roles = ["Full-Stack Developer", "CSE Student @ DSU", "MERN Enthusiast", "Problem Solver"];
+        let roleIdx = 0;
+        let charIdx = 0;
+        let isDeleting = false;
+        const typingText = document.getElementById('typing-text');
 
+        function type() {
+            const currentRole = roles[roleIdx];
+            if (isDeleting) {
+                typingText.innerText = currentRole.substring(0, charIdx - 1);
+                charIdx--;
+            } else {
+                typingText.innerText = currentRole.substring(0, charIdx + 1);
+                charIdx++;
+            }
 
+            if (!isDeleting && charIdx === currentRole.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIdx === 0) {
+                isDeleting = false;
+                roleIdx = (roleIdx + 1) % roles.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 150);
+            }
+        }
+        type();
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
 
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+        // Certificate Modal Logic
+        const viewCertBtns = document.querySelectorAll('.view-cert-btn');
+        const certModal = document.getElementById('cert-modal');
+        const modalImg = document.getElementById('modal-img');
+        const modalClose = document.getElementById('modal-close');
 
+        viewCertBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                const fullImg = btn.getAttribute('data-full-img');
+                if (fullImg && !fullImg.includes('YOUR_CERT_IMAGE_HERE')) {
+                    modalImg.src = fullImg;
+                    certModal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    alert("Certificate image not added yet. Please add your image path to data-full-img attribute.");
+                }
+            });
+        });
 
+        modalClose.addEventListener('click', () => {
+            certModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
 
-
-
-<section class="contact" id="contact">
-    <form action="">
-    <h1>Contact <span>Me</span></h1>
-    <div class="input-box">
-        <div class="input-field">
-            <input type="text" placeholder="Full Name" required>
-        </div>
-
-        <div class="input-field">
-            <input type="email" placeholder="Email Address" required>
-        </div>
-    </div>
-
-    <div class="input-box">
-        <div class="input-field">
-            <input type="tel" placeholder="Mobile Number" required>
-        </div>
-
-        <div class="input-field">
-            <input type="text" placeholder="Email Subject" required>
-        </div>
-    </div>
-
-    <div class="text-field">
-        <textarea name="" id="" placeholder="Your Message" required></textarea>
-    
-    </div>
-    <button type="submit">SUBMIT</button>
-    </form>
-</section>
-
-
-<script>
-    var sidemenu = document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemenu.style.right = "0";
-    }
-
-    function closemenu(){
-        sidemenu.style.right = "-200px";
-    }
-
-              // PROJECT CARDS EFFECT
-
-        //     document.querySelectorAll('.card').forEach(card => {
-        //     card.addEventListener('mouseenter', () => {
-        //         // Optional: Add overlay or particle effect
-        //         card.style.background = 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)';
-        //     });
-            
-        //     card.addEventListener('mouseleave', () => {
-        //         card.style.background = 'white';
-        //     });
-        // });
-
-
-
-         // skills
-
-function setActive(btn) {
-    document.querySelectorAll(".toggle button")
-        .forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-}
-
-function showAll(e) {
-    setActive(e.target);
-    skills.classList.remove("hidden");
-    tools.classList.remove("hidden");
-    skillsHeading.classList.remove("hidden");
-    toolsHeading.classList.remove("hidden");
-}
-
-function showSkills(e) {
-    setActive(e.target);
-    skills.classList.remove("hidden");
-    skillsHeading.classList.remove("hidden");
-    tools.classList.add("hidden");
-    toolsHeading.classList.add("hidden");
-}
-
-function showTools(e) {
-    setActive(e.target);
-    tools.classList.remove("hidden");
-    toolsHeading.classList.remove("hidden");
-    skills.classList.add("hidden");
-    skillsHeading.classList.add("hidden");
-}
-
-
-
-</script>
-
-
-
-
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) {
+                certModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>
