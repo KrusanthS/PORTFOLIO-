@@ -632,40 +632,26 @@ footer { padding: 4rem 0; border-top: 1px solid var(--glass-border); text-align:
 }
 
 @media (max-width: 968px) {
-  section {
-    padding: 60px 0;
-  }
-  
   .hero-grid, .about-grid, .contact-grid { 
     grid-template-columns: 1fr; 
-    text-align: left;
+    text-align: center;
     gap: 3rem;
   }
   
-  .section-title {
-    text-align: left;
-  }
-  
-  .section-title .underline {
-    margin: 0;
-  }
-
   .hero-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   
   .hero-content h1 { 
     font-size: 3.2rem; 
     margin-bottom: 1.5rem;
-    text-align: left;
   }
   
   .hero-p { 
-    margin: 0 0 2.5rem 0; 
+    margin: 0 auto 2.5rem; 
     font-size: 1rem;
-    text-align: left;
   }
 
   .menu-toggle { display: block; }
@@ -742,12 +728,9 @@ footer { padding: 4rem 0; border-top: 1px solid var(--glass-border); text-align:
 @media (max-width: 480px) {
   .hero-content h1 { font-size: 2.5rem; }
   .typing-text { font-size: 1.5rem; }
+  .btn { width: 100%; justify-content: center; }
   .skill-card-v2 { width: 46%; }
   .projects-grid { grid-template-columns: 1fr; }
-  
-  /* Additional mobile padding fixes */
-  .story-card { padding: 1.5rem; }
-  .form-container { padding: 1.5rem; }
 }
 
 .mobile-hidden {
@@ -763,14 +746,6 @@ footer { padding: 4rem 0; border-top: 1px solid var(--glass-border); text-align:
     display: flex;
     justify-content: center;
     margin-top: 2rem;
-  }
-  
-  .story-card {
-    padding: 2rem; /* Less padding on tablet */
-  }
-  
-  .form-container {
-    padding: 1.5rem;
   }
 }
 
